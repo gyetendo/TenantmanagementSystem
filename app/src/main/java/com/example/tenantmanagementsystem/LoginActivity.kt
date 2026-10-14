@@ -1,7 +1,6 @@
 package com.example.tenantmanagementsystem
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,11 +16,13 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Check if an email was sent back from RegisterActivity
         val registeredEmail = intent.getStringExtra("EMAIL")
         if (registeredEmail != null) {
             binding.emailEditText.setText(registeredEmail)
         }
 
+        // Login button action
         binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString()
@@ -31,18 +32,16 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Passes the email to MainActivity so it can show the Welcome Toast
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("EMAIL", email)
             startActivity(intent)
             finish()
         }
 
+        // Open Register screen
         binding.registerTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.helpTextView.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strathmore.edu"))
             startActivity(intent)
         }
     }
