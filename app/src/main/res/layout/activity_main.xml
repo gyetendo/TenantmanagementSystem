@@ -39,8 +39,7 @@
             android:id="@+id/tenantNameEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginHorizontal="24dp"
             android:layout_marginTop="8dp"
             android:hint="Enter tenant name"
             android:minHeight="48dp"
@@ -64,8 +63,7 @@
             android:id="@+id/phoneEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginHorizontal="24dp"
             android:layout_marginTop="8dp"
             android:hint="Enter phone number"
             android:inputType="phone"
@@ -79,8 +77,8 @@
             android:id="@+id/rentEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:hint="Enter Rent Paid"
             android:inputType="numberDecimal"
@@ -111,6 +109,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rentEditText" />
+
+        <Button
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="CALL TENANT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tenantResultTextView" />
+
+        <TextView
+            android:id="@+id/displayNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@{tenant.name}"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/callButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
