@@ -1,12 +1,14 @@
 package com.example.tenantmanagementsystem
 
+import java.io.Serializable
+
 data class Tenant(
     val name: String,
     val phone: String,
     val rent: String
-) {
-    // Custom summary formatting, this formats and returns the tenant details in string
+) : Serializable {
+
     fun summary(): String {
-        return "Tenant: $name\nPhone: $phone\nRent paid: KSh $rent"
+        return "Tenant: $name\nPhone: $phone\nRent: KSh $rent"
     }
 }
