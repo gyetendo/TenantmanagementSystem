@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-
+    alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
     // Safe Args: switch on for this app module (must be below android.application)
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -49,7 +50,10 @@ dependencies {
     // Navigation Component & Safe Args libraries
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.8")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.8")
-
+// Room local database libraries
+    implementation("androidx.room:room-runtime:2.7.2")
+    implementation("androidx.room:room-ktx:2.7.2")
+    ksp("androidx.room:room-compiler:2.7.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
