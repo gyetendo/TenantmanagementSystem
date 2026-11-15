@@ -47,7 +47,18 @@ class MainActivity : AppCompatActivity() {
 
         // 4. Connect App Bar and Drawer to navigation
         setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.navView.setupWithNavController(navController)
+        binding.navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.dashboardFragment -> {
+                    navController.popBackStack(R.id.dashboardFragment, false)
+                }
+                else -> {
+                    menuItem.onNavDestinationSelected(navController)
+                }
+            }
+            binding.drawerLayout.closeDrawers()
+            true
+        }
 
         // 5. Display user email inside the drawer header via view binding reference
         val email = intent.getStringExtra("EMAIL")
