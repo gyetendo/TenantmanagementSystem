@@ -21,4 +21,5 @@ Team
 | 2 ViewModel | Trisha Wakaba | 176173 | feature/viewmodel https://github.com/gyetendo/TenantmanagementSystem/pull/1#issue-6246067233 
 | 3 Room | Gianna Mutheu | 189610 | |https://github.com/gyetendo/TenantmanagementSystem/pull/2#issue-6273304142
 | 4 Screens | Shirlynn Muthomi| 190228 | https://github.com/gyetendo/TenantmanagementSystem/pull/3#issue-6340722646
-| 5 Data integration | Ssennoga Tendo Lynette | 191338 | https://github.com/gyetendo/TenantmanagementSystem/pull/5#issue-6402035811 
+| 5 Data integration | Ssennoga Tendo Lynette | 191338 | https://github.com/gyetendo/TenantmanagementSystem/pull/5#issue-6402035811
+| 6 Release | Yetendo Gabriella| 192466| https://github.com/gyetendo/TenantmanagementSystem/pull/6#issue-6403681624
